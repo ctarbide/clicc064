@@ -3,7 +3,7 @@
  *------------------------------------------------------------------------------
  * Projekt  : APPLY - A Practicable And Portable Lisp Implementation
  *            ------------------------------------------------------
- * Funktion : obrep2.h - datenrepräsentationsspezifisch
+ * Funktion : obrep2.h - datenreprÃ¤sentationsspezifisch
  *
  * $Revision: 1.11 $
  * $Log: obrep2.h,v $
@@ -25,14 +25,14 @@
  * Aufruf des undefinierten Makros FNUM in SIZE_TAG entfernt.
  *
  * Revision 1.7  1994/05/24  14:04:15  sma
- * Tag-Größe mal probehalber von 8 auf 5 bits reduziert (macht die
- * fixnums größer).
+ * Tag-GrÃ¶ÃŸe mal probehalber von 8 auf 5 bits reduziert (macht die
+ * fixnums grÃ¶ÃŸer).
  *
  * Revision 1.6  1994/05/22  15:00:08  sma
- * LOAD_SMALLFIXNUM-Makro eingefügt.
+ * LOAD_SMALLFIXNUM-Makro eingefÃ¼gt.
  *
  * Revision 1.5  1994/05/18  15:15:42  sma
- * Komplett neu geschrieben. Funktionsfähig bis auf
+ * Komplett neu geschrieben. FunktionsfÃ¤hig bis auf
  * foreign-function-interface-Funktionen.
  *
  * Revision 1.4  1993/11/12  13:09:42  sma
@@ -42,7 +42,7 @@
  * Neues internes Makro: LOAD_MASK
  *
  * Revision 1.2  1993/10/29  15:01:53  sma
- * Alle notwendigen Änderungen für korrektes Funktionieren.
+ * Alle notwendigen Ã„nderungen fÃ¼r korrektes Funktionieren.
  *
  * Revision 1.1  1993/10/14  15:55:12  sma
  * Initial revision
@@ -67,7 +67,7 @@ union cl_form {
 };
 
 /*------------------------------------------------------------------------------
- * Werte für UNBOUND und NIL
+ * Werte fÃ¼r UNBOUND und NIL
  *----------------------------------------------------------------------------*/
 
 extern CL_FORM nil_ob, unbound_ob;
@@ -76,7 +76,7 @@ extern CL_FORM nil_ob, unbound_ob;
 #define NIL_VALUE (&nil_ob)
 
 /*------------------------------------------------------------------------------
- * Konstruktoren für Konstantendefinitionen
+ * Konstruktoren fÃ¼r Konstantendefinitionen
  *----------------------------------------------------------------------------*/
 
 typedef CL_FORM CL_INIT;
@@ -162,7 +162,7 @@ typedef CL_FORM CL_INIT;
 /* ... */
 
 /*------------------------------------------------------------------------------
- * Zugriff auf tag und Größen/Char/Fixnum-Feld
+ * Zugriff auf tag und GrÃ¶ÃŸen/Char/Fixnum-Feld
  *----------------------------------------------------------------------------*/
 
 #define TAG_BITS 5
@@ -175,7 +175,7 @@ typedef CL_FORM CL_INIT;
 #define FIXN_TAG(tag,n) (((long)(n) << TAG_BITS) + (tag))
 
 /*------------------------------------------------------------------------------
- * Typtest-Prädikate
+ * Typtest-PrÃ¤dikate
  *----------------------------------------------------------------------------*/
 
 #define TYPE_OF(loc) TAG_FIELD((loc)->form)
@@ -356,7 +356,7 @@ typedef CL_FORM CL_INIT;
 #define BIT_AR(ar)           GET_BITS_PTR(AR_BASE(ar))
 
 /*------------------------------------------------------------------------------
- * Makro für EQ und EQL-Funktion
+ * Makro fÃ¼r EQ und EQL-Funktion
  *----------------------------------------------------------------------------*/
 #define EQ(x, y) (GET_FORM(x) == GET_FORM(y))
 
@@ -375,7 +375,7 @@ typedef CL_FORM CL_INIT;
 }
 
 /*------------------------------------------------------------------------------
- * CLOSURE auf Heap erzeugen und Kopf ausfüllen
+ * CLOSURE auf Heap erzeugen und Kopf ausfÃ¼llen
  *----------------------------------------------------------------------------*/
 #define GEN_CLOSURE(ar,top,sz,code,ps) \
      CL_FORM *ar = form_alloc(top, sz); \
@@ -384,7 +384,7 @@ typedef CL_FORM CL_INIT;
      ar[2].d = ps
 
 /*------------------------------------------------------------------------------
- * Anzahl der Bits, die für Bitvektoren in einer Fixnum genutzt werden
+ * Anzahl der Bits, die fÃ¼r Bitvektoren in einer Fixnum genutzt werden
  *----------------------------------------------------------------------------*/
 #define BITS_PER_FIXNUM 24
 
@@ -402,7 +402,7 @@ typedef CL_FORM CL_INIT;
 #define INIT_FIXNUM(fob,n) ((fob)->d = FIXN_TAG(CL_FIXNUM, n))
 
 /*------------------------------------------------------------------------------
- * Funktionen für Zugriff auf optimierte Restparameter
+ * Funktionen fÃ¼r Zugriff auf optimierte Restparameter
  *----------------------------------------------------------------------------*/
 #define LOCAL(x)  STACK(local, x)
 #define REST_LENGTH(r, loc)  LOAD_FIXNUM(loc, local - (r), loc)

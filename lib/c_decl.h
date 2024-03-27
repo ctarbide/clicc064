@@ -12,7 +12,7 @@
  *
  * Revision 1.39  1994/04/28  09:42:12  sma
  * COPY und LISP_FUN Makros von obrep1 nach c_decl.h verschoben,
- * RET_BOOL_OPT eingeführt.
+ * RET_BOOL_OPT eingefÃ¼hrt.
  *
  * Revision 1.38  1994/04/18  11:38:42  pm
  * Foreign Function Interface voellig ueberarbeitet.
@@ -28,7 +28,7 @@
  * 'extern'-Referenz auf 'Ssys' entfernt.
  *
  * Revision 1.35  1994/01/21  13:14:54  sma
- * Neues Makro LOAD_BOOL(expr, loc) welches das Lisp-äquivalent eines C
+ * Neues Makro LOAD_BOOL(expr, loc) welches das Lisp-Ã¤quivalent eines C
  * Wahrheitswerts nach "loc" schreibt. RET_BOOL basiert jetzt auf dieser
  * allgemeineren Form. Wird in cginline benutzt.
  *
@@ -36,25 +36,25 @@
  * Macros fuer den umgang mit dem FFI eingefuegt.
  *
  * Revision 1.33  1993/12/09  13:30:02  sma
- * Neues Makro ARG(xxxx) als Ersatz für STACK(base, xxxx)
+ * Neues Makro ARG(xxxx) als Ersatz fÃ¼r STACK(base, xxxx)
  *
  * Revision 1.32  1993/11/22  09:24:02  hk
  * Neuer C-Code ONLY_ONCE in Initialisierungsfunktionen, der bewirkt,
  * da_ diese Funktionen hvchstens 1x ausgef|hrt werden.
  *
  * Revision 1.31  1993/10/14  16:05:11  sma
- * __OBREP wird nur == 1 definiert, wenn es nicht schon über die
+ * __OBREP wird nur == 1 definiert, wenn es nicht schon Ã¼ber die
  * Kommandozeile des Compilers gesetzt wurde.
  * CL_FORM wird erst innerhalb von obrepX.h definiert.
  * Die Definition von CONTENV, etc wird bis hinter die Einbindung von
- * obrepX.h verzögert.
+ * obrepX.h verzÃ¶gert.
  *
  * Revision 1.30  1993/09/09  09:55:29  uho
  * Zwei neue Macros definiert, deren Expansion bisher im Codegenerator
  * vorgenommen wurde: MEM_UP_MOVE und MV_TO_STACK.
  *
  * Revision 1.29  1993/09/07  16:10:24  sma
- * obrep?.h enthält objektrepäsentationsspezigische Definitionen
+ * obrep?.h enthÃ¤lt objektrepÃ¤sentationsspezigische Definitionen
  *
  * Revision 1.28  1993/08/10  11:44:51  ft
  * Makro zum Pruefen auf den Typ CL_INSTANCE eingefuegt.
@@ -63,7 +63,7 @@
  * Erweiterungen des FFI um Pointer
  *
  * Revision 1.26  1993/07/22  08:54:43  pm
- * LOAD- und GET-Funktionen für C-Strukturen
+ * LOAD- und GET-Funktionen fÃ¼r C-Strukturen
  *
  * Revision 1.25  1993/07/05  16:03:21  sma
  * Nur eine Zeile und trotzdem ein Fehler...
@@ -155,7 +155,7 @@
  * Konfiguration
  *----------------------------------------------------------------------------*/
 #ifndef __OBREP
-#define __OBREP  1              /* Art der Datenrepräsentation */
+#define __OBREP  1              /* Art der DatenreprÃ¤sentation */
 #endif
 #define __INT_GE_PTR            /* sizeof(int) >= sizeof(void *) */
 
@@ -178,7 +178,7 @@ typedef char *PTR;
 
 
 /*------------------------------------------------------------------------------
- * Vorwärts-Deklaration
+ * VorwÃ¤rts-Deklaration
  *----------------------------------------------------------------------------*/
 typedef struct global_funarg GLOBAL_FUNARG;
 typedef struct down_funarg DOWN_FUNARG;
@@ -194,7 +194,7 @@ typedef void CLOSURE_FUN (/*CL_FORM *base, ...*/);
 
 
 /*------------------------------------------------------------------------------
- * Alle Datenrepräsentationsabhängigen Definitionen einbinden...
+ * Alle DatenreprÃ¤sentationsabhÃ¤ngigen Definitionen einbinden...
  *----------------------------------------------------------------------------*/
 #if __OBREP == 1
 #include "obrep1.h"
@@ -207,7 +207,7 @@ typedef void CLOSURE_FUN (/*CL_FORM *base, ...*/);
 
 
 /*------------------------------------------------------------------------------
- * Datenstruktur für Continuations
+ * Datenstruktur fÃ¼r Continuations
  *----------------------------------------------------------------------------*/
 struct contenv
 {
@@ -218,23 +218,23 @@ struct contenv
 
 
 /*------------------------------------------------------------------------------
- * Makro für den Zugriff auf den Stackframe einer LISP-Funktion
+ * Makro fÃ¼r den Zugriff auf den Stackframe einer LISP-Funktion
  *----------------------------------------------------------------------------*/
 #define STACK(base, offset) ((base) + (offset))
 
 /*------------------------------------------------------------------------------
- * Makro speziell für den Zugriff auf den LISP-Stack definiert durch "base"
+ * Makro speziell fÃ¼r den Zugriff auf den LISP-Stack definiert durch "base"
  *----------------------------------------------------------------------------*/
 #define ARG(offset) ((base) + (offset))
 
 /*------------------------------------------------------------------------------
- * Makro für den Zugriff auf ein Element eines Vektors von CL_FORMs
+ * Makro fÃ¼r den Zugriff auf ein Element eines Vektors von CL_FORMs
  *----------------------------------------------------------------------------*/
 #define OFFSET(vector, offset) ((vector) + (offset))
 
 
 /*------------------------------------------------------------------------------
- * Makro für das Kopieren der CL_FORM-Struktur
+ * Makro fÃ¼r das Kopieren der CL_FORM-Struktur
  * Bei einigen Kompilern muss Komponentenweise kopiert werden.
  *----------------------------------------------------------------------------*/
 #define COPY(source, dest) (*(dest) = *(source))
@@ -313,7 +313,7 @@ struct contenv
 /*------------------------------------------------------------------------------
  * eigenes setjmp/longjmp definieren, damit auch auf Maschinen, bei denen
  * sizeof(char*) > sizeof(int) gilt, Zeiger als Parameter von longjmp 
- * angegeben werden können.
+ * angegeben werden kÃ¶nnen.
  *----------------------------------------------------------------------------*/
 #ifdef __INT_GE_PTR
 #define SETJMP(buf)  setjmp(buf)
@@ -325,7 +325,7 @@ struct contenv
 #endif
 
 /*------------------------------------------------------------------------------
- * Konvertiert C-bool in LISP-Äquivalent
+ * Konvertiert C-bool in LISP-Ã„quivalent
  *----------------------------------------------------------------------------*/
 #define LOAD_BOOL(expr, loc)  if (expr) LOAD_T(loc); else LOAD_NIL(loc)
 

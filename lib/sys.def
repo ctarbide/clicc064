@@ -22,21 +22,21 @@
 ;;; - Benoetigte Laufzeitsystemfunktionen angepasst bzw. eingtragen
 ;;;
 ;;; Revision 1.40  1994/02/08  13:50:39  sma
-;;; Annotation my-last-arg-may-be-rest-var bei funs, die angibt, daﬂ das
+;;; Annotation my-last-arg-may-be-rest-var bei funs, die angibt, da√ü das
 ;;; letzte Argument der hiermit annotierten Funktion auch ein rest-listen
-;;; Parameter sein kann. Die Annotation enth‰lt in diesem Falle den Namen
+;;; Parameter sein kann. Die Annotation enth√§lt in diesem Falle den Namen
 ;;; (als Keyword) ihrer Funktion.
 ;;;
 ;;; Revision 1.39  1994/01/27  16:20:53  kl
 ;;; rt::fixnump eingetragen.
 ;;;
 ;;; Revision 1.38  1994/01/26  19:17:37  kl
-;;; Funktionen rt::<fix und rt::1-fix eingef¸hrt.
+;;; Funktionen rt::<fix und rt::1-fix eingef√ºhrt.
 ;;;
 ;;; Revision 1.37  1994/01/24  16:35:43  sma
 ;;; Not und null auskommentiert (jetzt in pred.lisp implemtiert),
-;;; rt::new-struct ver‰ndert, rt::struct-size gelˆscht, Definition der
-;;; Symbole T und NIL gelˆscht. T wird in lisp.lisp definiert, NIL ist dem
+;;; rt::new-struct ver√§ndert, rt::struct-size gel√∂scht, Definition der
+;;; Symbole T und NIL gel√∂scht. T wird in lisp.lisp definiert, NIL ist dem
 ;;; Compiler immer bekannt.
 ;;;
 ;;; Revision 1.36  1994/01/21  14:52:04  ft
@@ -46,41 +46,41 @@
 ;;; Neue Funktionen zur Berechnung von Floatingpointkonstanten.
 ;;;
 ;;; Revision 1.34  1994/01/21  08:21:36  sma
-;;; Erneute ƒnderung der Symbolrepr‰sentation (letzte ƒnderung war keine
+;;; Erneute √Ñnderung der Symbolrepr√§sentation (letzte √Ñnderung war keine
 ;;; so gute Idee). Neue Funktionen rt::symp und rt::unbound-value.
 ;;;
 ;;; Revision 1.33  1994/01/14  09:17:17  sma
-;;; ƒnderungen f¸r char.lisp/character.c
+;;; √Ñnderungen f√ºr char.lisp/character.c
 ;;;
 ;;; Revision 1.32  1994/01/13  16:34:13  sma
-;;; ƒnderungen an Funktionen f¸r symbols. Mehr Lisp, weniger C.
-;;; rt::(set)-struct-ref-internal heiﬂt jetzt rt::structure-ref. Die
+;;; √Ñnderungen an Funktionen f√ºr symbols. Mehr Lisp, weniger C.
+;;; rt::(set)-struct-ref-internal hei√üt jetzt rt::structure-ref. Die
 ;;; set-Variante wird jetzt mit setf definiert.
 ;;;
 ;;; Revision 1.31  1994/01/06  17:32:37  sma
-;;; Neue Annotation :need-no-stack ¸berall eingef¸gt, wo mˆglich und
+;;; Neue Annotation :need-no-stack √ºberall eingef√ºgt, wo m√∂glich und
 ;;; sinnvoll.  Dient dazu, in der Codegeneration mehr COPY-Befehle
 ;;; einzusparen. Siehe log message von 1.45 von cgfuns.
 ;;;
 ;;; Revision 1.30  1994/01/05  12:59:44  sma
-;;; Namens‰nderung: -internal postfix gelˆscht. Einige Deklarationen
-;;; gelˆscht, f¸r die keine Laufzeitfunktionen existierten. Alle rt::
+;;; Namens√§nderung: -internal postfix gel√∂scht. Einige Deklarationen
+;;; gel√∂scht, f√ºr die keine Laufzeitfunktionen existierten. Alle rt::
 ;;; -Funktionen alphabetisch sortiert.
 ;;;
 ;;; Revision 1.29  1993/12/14  14:03:56  pm
 ;;; package-name bei den FFI-symbolen teilweise von rt in ffi geaendert
 ;;;
 ;;; Revision 1.28  1993/12/14  12:28:08  sma
-;;; Namens‰nderungen durch Einf¸hrung von plain-vector-Typ.
-;;; %vector-length heiﬂt jetzt plain-vector-length,
-;;; simple-vector-element-code und make-simple-vector heiﬂen jetzt
+;;; Namens√§nderungen durch Einf√ºhrung von plain-vector-Typ.
+;;; %vector-length hei√üt jetzt plain-vector-length,
+;;; simple-vector-element-code und make-simple-vector hei√üen jetzt
 ;;; plain-vector-element-code und make-plain-vector. (set-)svref wurden um
-;;; -internal erg‰nzt. ‹berfl¸ssige Deklaration von raw-list-length
+;;; -internal erg√§nzt. √úberfl√ºssige Deklaration von raw-list-length
 ;;; entfernt.
 ;;;
 ;;; Revision 1.27  1993/12/09  14:03:19  sma
-;;; ƒnderungen f¸r neue Array-Repr‰sentation. Funktionsspezifikationen
-;;; f¸r jetzt in LISP definierte Funktionen entfernt.
+;;; √Ñnderungen f√ºr neue Array-Repr√§sentation. Funktionsspezifikationen
+;;; f√ºr jetzt in LISP definierte Funktionen entfernt.
 ;;;
 ;;; Revision 1.26  1993/11/04  13:45:25  atr
 ;;; Die Funktionen catch-internal, unwind-protect-internal und

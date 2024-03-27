@@ -3,7 +3,7 @@
  *------------------------------------------------------------------------------
  * Projekt  : APPLY - A Practicable And Portable Lisp Implementation
  *            ------------------------------------------------------
- * Funktion : obrep1.h - datenrepräsentationsspezifisch
+ * Funktion : obrep1.h - datenreprÃ¤sentationsspezifisch
  *
  * $Revision: 1.26 $
  * $Log: obrep1.h,v $
@@ -11,16 +11,16 @@
  * UNBOUND wieder als eigenen Tzp eingefuehrt.
  *
  * Revision 1.25  1994/05/22  15:00:38  sma
- * LOAD_SMALLFIXNUM-Makro eingefügt.
+ * LOAD_SMALLFIXNUM-Makro eingefÃ¼gt.
  *
  * Revision 1.24  1994/05/18  15:13:40  sma
- * Neues EQL-Makro; Makros MALLOC und HEAP_ALIGN gelöscht; global_funarg
- * und down_funarg von c_decl.h nach hier verschoben; Makros für Zugriff
+ * Neues EQL-Makro; Makros MALLOC und HEAP_ALIGN gelÃ¶scht; global_funarg
+ * und down_funarg von c_decl.h nach hier verschoben; Makros fÃ¼r Zugriff
  * auf global/down_funarg von funcall.c nach hier verschoben; neues Makro
  * INIT_FUN welches obrep-spezifische Initialisierungen enthalten kann.
  *
  * Revision 1.23  1994/04/28  09:40:51  sma
- * Viele Änderungen um eine höhere Abstraktion des von CLiCC erzeugten
+ * Viele Ã„nderungen um eine hÃ¶here Abstraktion des von CLiCC erzeugten
  * C-Codes zu erlangen.
  *
  * Revision 1.22  1994/04/18  11:40:37  pm
@@ -30,11 +30,11 @@
  * - Neue Macros eingefuegt
  *
  * Revision 1.21  1994/04/11  12:45:32  sma
- * Neues Makro REST_NOT_EMPTY, im Rahmen einer Korrektur für
- * rest-variablen, die auf Prädikatsposition stehen.
+ * Neues Makro REST_NOT_EMPTY, im Rahmen einer Korrektur fÃ¼r
+ * rest-variablen, die auf PrÃ¤dikatsposition stehen.
  *
  * Revision 1.20  1994/02/03  17:28:35  sma
- * Änderungen für Optimierung von &rest-Paramtern.
+ * Ã„nderungen fÃ¼r Optimierung von &rest-Paramtern.
  *
  * Revision 1.19  1994/01/26  11:04:28  sma
  * Letzten Verweis auf in symbols.c definiertes T entfernt.
@@ -42,46 +42,46 @@
  * Revision 1.18  1994/01/24  16:40:27  sma
  * LOAD_T liefert jetzt nicht mehr das Symbol T (geht nicht, dies wird
  * `erst' im LISP-Modul definiert) sondern einen Wahrheitswert `true'
- * (momentan repräsentiert durch #\T). Korrektur der AR_SIZE von
+ * (momentan reprÃ¤sentiert durch #\T). Korrektur der AR_SIZE von
  * Strukturen. Probehalber mal TAG mit dem Typ int definiert.
  *
  * Revision 1.17  1994/01/21  13:15:26  sma
  * Fehler in INIT_SYMBOL verbessert
  *
  * Revision 1.16  1994/01/21  08:25:25  sma
- * Erneute Änderung der Symbolrepräsentation (letzte Änderung war keine
- * so gute Idee). Änderung der Repräsentation von UNBOUND.
+ * Erneute Ã„nderung der SymbolreprÃ¤sentation (letzte Ã„nderung war keine
+ * so gute Idee). Ã„nderung der ReprÃ¤sentation von UNBOUND.
  *
  * Revision 1.15  1994/01/13  16:31:50  sma
- * Änderungen durch Umstellung der Symbolrepräsentation. Statt direkt
+ * Ã„nderungen durch Umstellung der SymbolreprÃ¤sentation. Statt direkt
  * eine "Immitation" eines simple-string am Symbolanfang zu speichern
  * wird ein echtes simple-string-Objekt eingetragen.
  *
  * Revision 1.14  1994/01/05  12:57:44  sma
- * SYM_MAKE_SYM-Makro gelöscht. INIT_* und LOAD_VEC_*-Makros eingefügt.
+ * SYM_MAKE_SYM-Makro gelÃ¶scht. INIT_* und LOAD_VEC_*-Makros eingefÃ¼gt.
  * Damit ist das Erzeugen von Vektoren, Strukturen, Instanzen und
- * Symbolen weiter von der objektrepräsentation abstrahiert.
+ * Symbolen weiter von der objektreprÃ¤sentation abstrahiert.
  *
  * Revision 1.13  1993/12/16  16:26:22  pm
  * Fehler behoben.
  *
  * Revision 1.12  1993/12/14  12:19:16  sma
- * Neues Testmakro CL_SMVEC_T_P für simple-vector-p.
+ * Neues Testmakro CL_SMVEC_T_P fÃ¼r simple-vector-p.
  *
  * Revision 1.11  1993/12/09  13:47:05  sma
- * MAKE_LIST in MAKE_CONSREF geändert. Alle Makros und Konstanten für die
- * neue Array-Repräsentation verändert/ergänzt/gelöscht. STACK(base, xx)
- * in ARG(xx) geändert.
+ * MAKE_LIST in MAKE_CONSREF geÃ¤ndert. Alle Makros und Konstanten fÃ¼r die
+ * neue Array-ReprÃ¤sentation verÃ¤ndert/ergÃ¤nzt/gelÃ¶scht. STACK(base, xx)
+ * in ARG(xx) geÃ¤ndert.
  *
  * Revision 1.10  1993/11/12  13:09:05  sma
  * Neue Konstante BITS_PER_FIXNUM.
  *
  * Revision 1.9  1993/10/29  15:02:31  sma
- * Änderungen für korrektes Funktionieren von obrep1 & obrep2.
+ * Ã„nderungen fÃ¼r korrektes Funktionieren von obrep1 & obrep2.
  *
  * Revision 1.8  1993/10/14  15:54:04  sma
- * Weitere Makros eingeführt, um obrep1 und obrep2 ohne Änderung von
- * weiterem Code austauschen zu können.
+ * Weitere Makros eingefÃ¼hrt, um obrep1 und obrep2 ohne Ã„nderung von
+ * weiterem Code austauschen zu kÃ¶nnen.
  *
  * Revision 1.7  1993/09/28  16:03:29  pm
  * Fehler korrigiert.
@@ -90,16 +90,16 @@
  * Pointer-Tags eingetragen
  *
  * Revision 1.5  1993/09/13  11:51:37  sma
- * Fehler in Längenangaben von Arrays, Vectoren und Instanzen beseitigt
- * durch Einführen des SET_AR_SIZE-Makros.
+ * Fehler in LÃ¤ngenangaben von Arrays, Vectoren und Instanzen beseitigt
+ * durch EinfÃ¼hren des SET_AR_SIZE-Makros.
  *
  * Revision 1.4  1993/09/09  15:30:13  uho
- * Einige Makrodefinitionen eingerückt, um die Lesbarkeit zu erhöhen.
+ * Einige Makrodefinitionen eingerÃ¼ckt, um die Lesbarkeit zu erhÃ¶hen.
  *
  * Revision 1.3  1993/09/06  16:43:57  sma
- * Umgeordnet, besser kommentiert, neue Makros für Konstantendefinitionen.
+ * Umgeordnet, besser kommentiert, neue Makros fÃ¼r Konstantendefinitionen.
  * cgconst.lisp erzeugt jetzt nicht mir direkt CL_INIT-Strukturen, sondern
- * MAKE_* Makros, die die eigentliche Repräsentation der Lispdaten
+ * MAKE_* Makros, die die eigentliche ReprÃ¤sentation der Lispdaten
  * abstrahieren.
  *
  * Revision 1.2  1993/08/23  09:59:44  pm
@@ -112,7 +112,7 @@
 
 
 /*------------------------------------------------------------------------------
- * Werte für UNBOUND, NIL und T
+ * Werte fÃ¼r UNBOUND, NIL und T
  *----------------------------------------------------------------------------*/
 #define UNBOUND_VALUE  0
 #define NIL_VALUE      0
@@ -146,7 +146,7 @@ struct clx_form
 /*------------------------------------------------------------------------------
  * Datenstruktur und Makros zum Initialisieren von LISP-Objekten.
  *
- * Es muß gelten sizeof(long) == sizeof( Komponenten von CL_FORM ),
+ * Es muÃŸ gelten sizeof(long) == sizeof( Komponenten von CL_FORM ),
  * sonst kann fehlerhafter Code erzeugt werden.
  *          CL_FORM          CL_INIT
  *       long: |----|,    long:   |----|
@@ -161,7 +161,7 @@ typedef struct
    
 
 /*------------------------------------------------------------------------------
- * Konstruktoren für Konstantendefinitionen
+ * Konstruktoren fÃ¼r Konstantendefinitionen
  *----------------------------------------------------------------------------*/
 #define END_SYMDEF  0           /* Endmarkierung einer Symboltabelle */
 #define IS_END_SYMDEF(x)        (TYPE_OF(x) == END_SYMDEF)
@@ -208,7 +208,7 @@ typedef struct
 #define MAKE_GLOBFUN(fun)       { CL_GLOBFUN, (long)fun }
 
 #define CONST_SYM   MAKE_CHAR('T') /* Symbol ist konstant */
-#define NORMAL_SYM  MAKE_NIL    /* Symbol ist veränderbar */
+#define NORMAL_SYM  MAKE_NIL    /* Symbol ist verÃ¤nderbar */
 
 
 /*------------------------------------------------------------------------------
@@ -261,7 +261,7 @@ typedef struct
 
 #define CL_INSTANCE         50  /* CLOS Instanz */
 
-/* Die nächsten Konstanten müssen in dieser Reihenfolge stehen!! */
+/* Die nÃ¤chsten Konstanten mÃ¼ssen in dieser Reihenfolge stehen!! */
 #define CL_C_CHAR           60  /* char, signed-char */
 #define CL_C_SHORT          61  /* short, short-int, signed-short,
                                    signed-short-int */
@@ -287,7 +287,7 @@ typedef struct
 
 
 /*------------------------------------------------------------------------------
- * Makros für den Zugriff auf die Komponenten eines LISP-Objektes
+ * Makros fÃ¼r den Zugriff auf die Komponenten eines LISP-Objektes
  *----------------------------------------------------------------------------*/
 /* Tags */
 #define TYPE_OF(loc)            ((loc)->tag)
@@ -355,7 +355,7 @@ typedef struct
 
 
 /*------------------------------------------------------------------------------
- * Prädikate zum Testen des Datentyps
+ * PrÃ¤dikate zum Testen des Datentyps
  *----------------------------------------------------------------------------*/
 #define CL_NILP(loc)       (TYPE_OF (loc) == CL_NIL)
 #define CL_TRUEP(loc)      NOT(CL_NILP(loc))
@@ -539,12 +539,12 @@ typedef struct
 #define BIT_AR(ar)           GET_BITS_PTR(AR_BASE(ar))
 
 /*------------------------------------------------------------------------------
- * Anzahl fürs Tag notwendigen Bits im Heap
+ * Anzahl fÃ¼rs Tag notwendigen Bits im Heap
  *----------------------------------------------------------------------------*/
 #define TAG_BITS 0
 
 /*------------------------------------------------------------------------------
- * Makro für EQ und EQL-Funktion
+ * Makro fÃ¼r EQ und EQL-Funktion
  *----------------------------------------------------------------------------*/
 #define EQ(x, y) (TYPE_OF(x) == TYPE_OF(y) && GET_FORM(x) == GET_FORM(y))
 
@@ -563,7 +563,7 @@ typedef struct
 
 
 /*------------------------------------------------------------------------------
- * Closure auf Heap erzeugen und Kopf ausfüllen.
+ * Closure auf Heap erzeugen und Kopf ausfÃ¼llen.
  *----------------------------------------------------------------------------*/
 #define GEN_CLOSURE(ar, top, sz, code, ps) \
    CL_FORM *ar = form_alloc(top, sz);      \
@@ -579,7 +579,7 @@ typedef struct
 
 
 /*------------------------------------------------------------------------------
- * Anzahl der Bits, die für Bitvektoren in einer Fixnum genutzt werden
+ * Anzahl der Bits, die fÃ¼r Bitvektoren in einer Fixnum genutzt werden
  *----------------------------------------------------------------------------*/
 #define BITS_PER_FIXNUM (sizeof(long) * 8)
 
@@ -609,7 +609,7 @@ typedef struct
     LOAD_NIL(OFFSET(sym, OFF_SYM_CONSTFLAG))
 
 /*------------------------------------------------------------------------------
- * Funktionen für Zugriff auf optimierte Restparameter
+ * Funktionen fÃ¼r Zugriff auf optimierte Restparameter
  *----------------------------------------------------------------------------*/
 #define LOCAL(x)  STACK(local, x)
 #define REST_LENGTH(r, loc)  LOAD_FIXNUM(loc, local - (r), loc)
@@ -658,7 +658,7 @@ typedef struct
    name.display = (disp)
 
 /*------------------------------------------------------------------------------
- * Datenstruktur für globale FUNARGs
+ * Datenstruktur fÃ¼r globale FUNARGs
  *----------------------------------------------------------------------------*/
 struct global_funarg
 {
@@ -667,7 +667,7 @@ struct global_funarg
 };
 
 /*------------------------------------------------------------------------------
- * Datenstruktur für DOWNward FUNctions
+ * Datenstruktur fÃ¼r DOWNward FUNctions
  *----------------------------------------------------------------------------*/
 struct down_funarg
 {
